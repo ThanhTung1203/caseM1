@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let mang = [1, 2, 3, 4, 5]
+    let x = 6;
+    let index = parseInt(prompt('nhập vào giá trị index '))
+    let mangmoi = [];
+    insertNumberToArray()
+
+    function insertNumberToArray() {
+        if (index < 0 || index > mang.length) {
+            alert(mang)
+        } else {
+
+            for (let i = 0; i < mang.length; i++) {
+                if (index === i) {
+                    mangmoi.push(x)
+                }
+                mangmoi.push(mang[i])
+            }
+
+            alert(mangmoi)
+        }
+
+    }
+</script>
+
+</body>
+</html>

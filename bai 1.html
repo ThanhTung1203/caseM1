@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    let a = +prompt('Nhập a');
+    let b = +prompt('Nhập b');
+    let c = +prompt('Nhập c');
+    let dem = 0;
+
+    if (a !== b && b !== c && c !== a && a !== 0 && b !== 0 && c !== 0) {
+        // Loop through all possible combinations of a, b, and c
+        for (let i = 1; i <= 3; i++) {
+            for (let j = 1; j <= 3; j++) {
+                for (let k = 1; k <= 3; k++) {
+                    if (i !== j && j !== k && k !== i) {
+                        // Construct a three-digit number
+                        let number = a * 100 + b * 10 + c;
+                        dem++;
+                        console.log(number);
+                    }
+                }
+            }
+        }
+    } else {
+        alert('a, b, c không hợp lệ');
+    }
+
+    alert('Số lượng số có thể tạo ra là: ' + dem);
+</script>
+
+
+</body>
+</html>
